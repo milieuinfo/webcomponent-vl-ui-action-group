@@ -19,9 +19,30 @@
 
 <script>
   suite('vl-action-group', () => {
+    let actionGroup;
+
+    setup(() => {
+      actionGroup = fixture('vl-action-group-fixture');
+    });
+
     test('heeft een div met de vl-action-group class', () => {
-      const div = fixture('vl-action-group-fixture');
-      assert.isTrue(div.classList.contains('vl-action-group'));
+      assert.isTrue(actionGroup.classList.contains('vl-action-group'));
+    });
+
+    test('heeft een vl-action-group--align-* class', () => {
+      ['right', 'center'].forEach((attribuutWaarde)=> {
+        assert.isFalse((actionGroup.classList.contains('vl-action-group--align-'+attribuutWaarde)));
+        actionGroup.setAttribute('align', attribuutWaarde);
+        assert.isTrue((actionGroup.classList.contains('vl-action-group--align-'+attribuutWaarde)));
+      });
+    });
+
+    test('heeft de juiste class voor elk attribuut', () => {
+      ['space-between', 'bordered'].forEach((attribuut)=> {
+        assert.isFalse((actionGroup.classList.contains('vl-action-group--'+attribuut)));
+        actionGroup.setAttribute(attribuut,'');
+        assert.isTrue((actionGroup.classList.contains('vl-action-group--'+attribuut)));
+      });
     });
   });
 </script>
