@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <script src="../../@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+
+  <script type="module" src="../vl-action-group.src.js"></script>
+  <title>vl-input-group test</title>
+</head>
+
+<body>
+<test-fixture id="vl-action-group-fixture">
+  <template>
+    <div  is="vl-action-group"></div>
+  </template>
+</test-fixture>
+
+<script>
+  suite('vl-action-group', () => {
+    test('heeft een div met de vl-action-group class', () => {
+      const div = fixture('vl-action-group-fixture');
+      assert.isTrue(div.classList.contains('vl-action-group'));
+    });
+  });
+</script>
+</body>
+
+</html>
