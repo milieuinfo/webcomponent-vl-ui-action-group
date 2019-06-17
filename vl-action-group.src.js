@@ -12,7 +12,6 @@ export class VlActionGroup extends NativeVlElement(HTMLDivElement) {
 
   connectedCallback() {
     this.classList.add('vl-action-group');
-    this._applyAttributes();
   }
 
   get _classPrefix() {
@@ -49,25 +48,20 @@ export class VlActionGroup extends NativeVlElement(HTMLDivElement) {
   }
 
   _space_betweenChangedCallback(oldValue, newValue) {
-    if (newValue != undefined){
-      this._element.classList.add(this._classPrefix + 'space-between');
-    }else{
-      this._element.classList.remove(this._classPrefix + 'space-between');
-    }
+    this._attribuutChangedCallback('space-between', oldValue, newValue);
   }
 
   _borderedChangedCallback(oldValue, newValue) {
+    this._attribuutChangedCallback('bordered', oldValue, newValue);
+  }
+
+  _attribuutChangedCallback(attribuut, oldValue, newValue) {
     if (newValue != undefined){
-      this._element.classList.add(this._classPrefix + 'bordered');
+      this._element.classList.add(this._classPrefix + attribuut);
     }else{
-      this._element.classList.remove(this._classPrefix + 'bordered');
+      this._element.classList.remove(this._classPrefix + attribuut);
     }
   }
-
-  _applyAttributes() {
-
-  }
-
 
 }
 
