@@ -1,4 +1,4 @@
-import {VlElement} from '/node_modules/vl-ui-core/vl-core.js';
+import { NativeVlElement } from '/node_modules/vl-ui-core/vl-core.js';
 
 
 /**
@@ -8,25 +8,21 @@ import {VlElement} from '/node_modules/vl-ui-core/vl-core.js';
  *
  * @extends VlElement
  */
-export class VlActionGroup extends VlElement(HTMLElement) {
-  constructor() {
-    super(`
-      <style>
-        @import "../style.css";
-      </style>
-      <div class="vl-action-group">
-        <slot></slot>
-      </div>
-    `);
-  }
+export class VlActionGroup extends NativeVlElement(HTMLDivElement) {
 
   connectedCallback() {
+    this.classList.add('vl-action-group');
     this._applyAttributes();
   }
 
   get _classPrefix() {
     return 'vl-action-group--';
   }
+
+  get _stylePath() {
+    return '../style.css';
+  }
+
 
   static get _observedClassAttributes() {
     return ['align','space-between','bordered'];
@@ -75,5 +71,4 @@ export class VlActionGroup extends VlElement(HTMLElement) {
 
 }
 
-
-customElements.define('vl-action-group', VlActionGroup);
+customElements.define('vl-action-group', VlActionGroup,{extends: 'div'});
