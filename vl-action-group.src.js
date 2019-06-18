@@ -8,7 +8,7 @@ import { NativeVlElement } from '/node_modules/vl-ui-core/vl-core.js';
  *
  * @extends NativeVlElement
  *
- * @property {boolean} align - Attribuut wordt gebruikt om ervoor te zorgen dat de onderliggende elementen worden gealigneerd. Mogelijkheden: align="center" of align="right".
+ * @property {string} align - Attribuut wordt gebruikt om ervoor te zorgen dat de onderliggende elementen worden gealigneerd. Mogelijkheden: align="center" of align="right".
  * @property {boolean} space-between - Attribuut wordt gebruikt om aan te duiden dat de ruimte tussen de elementen volledig moet worden opgevuld.
  * @property {boolean} bordered - Attribuut wordt gebruikt om aan te duiden dat de tussenliggende elementen een rand krijgen.
  */
