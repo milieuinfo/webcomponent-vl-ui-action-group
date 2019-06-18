@@ -32,10 +32,7 @@ export class VlActionGroup extends NativeVlElement(HTMLDivElement) {
   }
 
   _alignChangedCallback(oldValue, newValue){
-    if (["center", "right"].indexOf(newValue) >= 0){
-      this._element.classList.add(this._classPrefix + 'align-' + newValue);
-    }
-    this._element.classList.remove(this._classPrefix + 'align-' + oldValue);
+    this._changeClass(this, ('align-' + oldValue), ('align-' + newValue), this._classPrefix);
   }
 
 }
