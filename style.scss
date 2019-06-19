@@ -19,3 +19,7 @@
 // Components
 // ==========================================================================
 @import "vl-ui-action-group/src/scss/action-group";
+
+.vl-action-group ::slotted(.vl-button) {
+  @extend .vl-button
+}
