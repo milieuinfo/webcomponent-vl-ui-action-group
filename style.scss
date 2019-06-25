@@ -20,6 +20,6 @@
 // ==========================================================================
 @import "vl-ui-action-group/src/scss/action-group";
 
-.vl-action-group ::slotted(.vl-button) {
+.vl-action-group ::slotted(.vl-button), .vl-action-group > * {
   @extend .vl-button
 }

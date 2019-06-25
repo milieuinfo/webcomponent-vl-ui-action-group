@@ -52,13 +52,15 @@
 .vl-action-group a,
 .vl-action-group button,
 .vl-action-group .vl-button,
-.vl-action-group ::slotted(.vl-button) {
+.vl-action-group ::slotted(.vl-button),
+.vl-action-group > * {
   margin-right: 1.4rem;
 }
 .vl-action-group a:last-child,
 .vl-action-group button:last-child,
 .vl-action-group .vl-button:last-child,
-.vl-action-group :last-child::slotted(.vl-button) {
+.vl-action-group :last-child::slotted(.vl-button),
+.vl-action-group > :last-child {
   margin-right: 0;
 }
 .vl-action-group--align-right {
@@ -90,7 +92,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .vl-action-group--collapse--l .vl-button:not(:last-of-type), .vl-action-group--collapse--l .vl-action-group :not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--l :not(:last-of-type)::slotted(.vl-button) {
+  .vl-action-group--collapse--l .vl-button:not(:last-of-type), .vl-action-group--collapse--l .vl-action-group :not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--l :not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--l .vl-action-group > :not(:last-of-type) {
     margin-bottom: 1rem;
   }
   .vl-action-group--collapse--l .vl-link {
@@ -107,7 +109,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .vl-action-group--collapse--m .vl-button:not(:last-of-type), .vl-action-group--collapse--m .vl-action-group :not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--m :not(:last-of-type)::slotted(.vl-button) {
+  .vl-action-group--collapse--m .vl-button:not(:last-of-type), .vl-action-group--collapse--m .vl-action-group :not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--m :not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--m .vl-action-group > :not(:last-of-type) {
     margin-bottom: 1rem;
   }
   .vl-action-group--collapse--m .vl-link {
@@ -124,7 +126,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .vl-action-group--collapse--s .vl-button:not(:last-of-type), .vl-action-group--collapse--s .vl-action-group :not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--s :not(:last-of-type)::slotted(.vl-button) {
+  .vl-action-group--collapse--s .vl-button:not(:last-of-type), .vl-action-group--collapse--s .vl-action-group :not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--s :not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--s .vl-action-group > :not(:last-of-type) {
     margin-bottom: 1rem;
   }
   .vl-action-group--collapse--s .vl-link {
@@ -141,7 +143,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .vl-action-group--collapse--xs .vl-button:not(:last-of-type), .vl-action-group--collapse--xs .vl-action-group :not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--xs :not(:last-of-type)::slotted(.vl-button) {
+  .vl-action-group--collapse--xs .vl-button:not(:last-of-type), .vl-action-group--collapse--xs .vl-action-group :not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--xs :not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--xs .vl-action-group > :not(:last-of-type) {
     margin-bottom: 1rem;
   }
   .vl-action-group--collapse--xs .vl-link {
