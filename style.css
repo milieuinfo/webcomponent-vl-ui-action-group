@@ -52,17 +52,17 @@
 .vl-action-group a,
 .vl-action-group button,
 .vl-action-group .vl-button,
-.vl-action-group slot[name=button]::slotted(.vl-button),
-.vl-action-group slot[name=actions]::slotted(.vl-button),
-.vl-action-group > * {
+:host(vl-modal) .vl-action-group slot[name=button]::slotted(.vl-button),
+:host(vl-modal) .vl-action-group slot[name=actions]::slotted(.vl-button),
+:host(*:not(vl-modal)) .vl-action-group > * {
   margin-right: 1.4rem;
 }
 .vl-action-group a:last-child,
 .vl-action-group button:last-child,
 .vl-action-group .vl-button:last-child,
-.vl-action-group slot[name=button]:last-child::slotted(.vl-button),
-.vl-action-group slot[name=actions]:last-child::slotted(.vl-button),
-.vl-action-group > :last-child {
+:host(vl-modal) .vl-action-group slot[name=button]:last-child::slotted(.vl-button),
+:host(vl-modal) .vl-action-group slot[name=actions]:last-child::slotted(.vl-button),
+:host(*:not(vl-modal)) .vl-action-group > :last-child {
   margin-right: 0;
 }
 .vl-action-group--align-right {
@@ -94,7 +94,11 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .vl-action-group--collapse--l .vl-button:not(:last-of-type), .vl-action-group--collapse--l .vl-action-group slot[name=button]:not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--l slot[name=button]:not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--l .vl-action-group slot[name=actions]:not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--l slot[name=actions]:not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--l .vl-action-group > :not(:last-of-type) {
+  .vl-action-group--collapse--l .vl-button:not(:last-of-type), .vl-action-group--collapse--l :host(vl-modal) .vl-action-group slot[name=button]:not(:last-of-type)::slotted(.vl-button), :host(vl-modal) .vl-action-group .vl-action-group--collapse--l slot[name=button]:not(:last-of-type)::slotted(.vl-button),
+.vl-action-group--collapse--l :host(vl-modal) .vl-action-group slot[name=actions]:not(:last-of-type)::slotted(.vl-button),
+:host(vl-modal) .vl-action-group .vl-action-group--collapse--l slot[name=actions]:not(:last-of-type)::slotted(.vl-button),
+.vl-action-group--collapse--l :host(*:not(vl-modal)) .vl-action-group > :not(:last-of-type),
+:host(*:not(vl-modal)) .vl-action-group--collapse--l .vl-action-group > :not(:last-of-type) {
     margin-bottom: 1rem;
   }
   .vl-action-group--collapse--l .vl-link {
@@ -111,7 +115,11 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .vl-action-group--collapse--m .vl-button:not(:last-of-type), .vl-action-group--collapse--m .vl-action-group slot[name=button]:not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--m slot[name=button]:not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--m .vl-action-group slot[name=actions]:not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--m slot[name=actions]:not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--m .vl-action-group > :not(:last-of-type) {
+  .vl-action-group--collapse--m .vl-button:not(:last-of-type), .vl-action-group--collapse--m :host(vl-modal) .vl-action-group slot[name=button]:not(:last-of-type)::slotted(.vl-button), :host(vl-modal) .vl-action-group .vl-action-group--collapse--m slot[name=button]:not(:last-of-type)::slotted(.vl-button),
+.vl-action-group--collapse--m :host(vl-modal) .vl-action-group slot[name=actions]:not(:last-of-type)::slotted(.vl-button),
+:host(vl-modal) .vl-action-group .vl-action-group--collapse--m slot[name=actions]:not(:last-of-type)::slotted(.vl-button),
+.vl-action-group--collapse--m :host(*:not(vl-modal)) .vl-action-group > :not(:last-of-type),
+:host(*:not(vl-modal)) .vl-action-group--collapse--m .vl-action-group > :not(:last-of-type) {
     margin-bottom: 1rem;
   }
   .vl-action-group--collapse--m .vl-link {
@@ -128,7 +136,11 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .vl-action-group--collapse--s .vl-button:not(:last-of-type), .vl-action-group--collapse--s .vl-action-group slot[name=button]:not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--s slot[name=button]:not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--s .vl-action-group slot[name=actions]:not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--s slot[name=actions]:not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--s .vl-action-group > :not(:last-of-type) {
+  .vl-action-group--collapse--s .vl-button:not(:last-of-type), .vl-action-group--collapse--s :host(vl-modal) .vl-action-group slot[name=button]:not(:last-of-type)::slotted(.vl-button), :host(vl-modal) .vl-action-group .vl-action-group--collapse--s slot[name=button]:not(:last-of-type)::slotted(.vl-button),
+.vl-action-group--collapse--s :host(vl-modal) .vl-action-group slot[name=actions]:not(:last-of-type)::slotted(.vl-button),
+:host(vl-modal) .vl-action-group .vl-action-group--collapse--s slot[name=actions]:not(:last-of-type)::slotted(.vl-button),
+.vl-action-group--collapse--s :host(*:not(vl-modal)) .vl-action-group > :not(:last-of-type),
+:host(*:not(vl-modal)) .vl-action-group--collapse--s .vl-action-group > :not(:last-of-type) {
     margin-bottom: 1rem;
   }
   .vl-action-group--collapse--s .vl-link {
@@ -145,7 +157,11 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .vl-action-group--collapse--xs .vl-button:not(:last-of-type), .vl-action-group--collapse--xs .vl-action-group slot[name=button]:not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--xs slot[name=button]:not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--xs .vl-action-group slot[name=actions]:not(:last-of-type)::slotted(.vl-button), .vl-action-group .vl-action-group--collapse--xs slot[name=actions]:not(:last-of-type)::slotted(.vl-button), .vl-action-group--collapse--xs .vl-action-group > :not(:last-of-type) {
+  .vl-action-group--collapse--xs .vl-button:not(:last-of-type), .vl-action-group--collapse--xs :host(vl-modal) .vl-action-group slot[name=button]:not(:last-of-type)::slotted(.vl-button), :host(vl-modal) .vl-action-group .vl-action-group--collapse--xs slot[name=button]:not(:last-of-type)::slotted(.vl-button),
+.vl-action-group--collapse--xs :host(vl-modal) .vl-action-group slot[name=actions]:not(:last-of-type)::slotted(.vl-button),
+:host(vl-modal) .vl-action-group .vl-action-group--collapse--xs slot[name=actions]:not(:last-of-type)::slotted(.vl-button),
+.vl-action-group--collapse--xs :host(*:not(vl-modal)) .vl-action-group > :not(:last-of-type),
+:host(*:not(vl-modal)) .vl-action-group--collapse--xs .vl-action-group > :not(:last-of-type) {
     margin-bottom: 1rem;
   }
   .vl-action-group--collapse--xs .vl-link {
