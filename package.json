@@ -1,6 +1,6 @@
 {
   "name": "vl-ui-action-group",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "Toon meerdere knoppen of links. De groep zorgt ervoor dat ze correct zijn uitgelijnd.",
   "main": "vl-action-group.js",
   "repository": {
@@ -47,7 +47,7 @@
     "uglify-js-es6": "2.8.9",
     "vl-ui-button": "1.0.10",
     "vl-ui-icon": "2.0.6",
-    "vl-ui-link": "1.1.2",
+    "vl-ui-link": "1.1.4",
     "vl-ui-util": "^1.2.3",
     "wct-browser-legacy": "1.0.2",
     "web-component-tester": "6.9.2"
