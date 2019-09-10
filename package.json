@@ -36,7 +36,7 @@
     "vl-ui-core": "^1.4.2"
   },
   "devDependencies": {
-    "@govflanders/vl-ui-action-group": "3.7.2",
+    "@govflanders/vl-ui-action-group": "3.9.0",
     "@govflanders/vl-ui-button": "3.7.2",
     "@govflanders/vl-ui-core": "3.7.2",
     "@govflanders/vl-ui-link": "3.7.2",
