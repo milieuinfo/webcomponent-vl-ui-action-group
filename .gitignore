@@ -1,5 +1,5 @@
 .sass-cache/
 *.css.map
-vl-action-group.js
 node_modules/
 .idea/
+.vscode
