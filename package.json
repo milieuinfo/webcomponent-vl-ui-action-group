@@ -55,6 +55,6 @@
     "vl-ui-button": "^1.3.3",
     "vl-ui-icon": "^2.1.1",
     "vl-ui-link": "^1.1.10",
-    "vl-ui-util": "^3.4.1"
+    "vl-ui-util": "^3.4.2"
   }
 }
