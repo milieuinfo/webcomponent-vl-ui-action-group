@@ -9,5 +9,10 @@ describe('vl-action-group', async () => {
         return vlActionGroupPage.load();
     });
 
-    after(() => driver && driver.quit());
+    after((done) => { 
+        if (driver) {
+            driver.quit();
+        }
+        done();
+    });
 });
