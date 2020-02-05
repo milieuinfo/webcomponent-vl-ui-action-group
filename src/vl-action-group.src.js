@@ -1,6 +1,5 @@
 import { NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
 
-
 /**
  * VLActionGroup
  * @class
