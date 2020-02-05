@@ -1,5 +1,5 @@
 
-const { assert, driver } = require('vl-ui-core').Test;
+const { assert, driver } = require('vl-ui-core').Test.Setup;
 const VlActionGroupPage = require('./pages/vl-action-group.page');
 
 describe('vl-action-group', async () => {

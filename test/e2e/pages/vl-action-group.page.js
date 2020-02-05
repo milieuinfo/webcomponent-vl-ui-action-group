@@ -1,6 +1,5 @@
 const VlActionGroup = require('../components/vl-action-group');
-const { Page } = require('vl-ui-core');
-const { Config } = require('vl-ui-core');
+const { Page, Config } = require('vl-ui-core').Test;
 
 class VlActionGroupPage extends Page {
     async _getActionGroup(selector) {
