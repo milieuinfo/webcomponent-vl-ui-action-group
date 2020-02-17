@@ -9,7 +9,11 @@ describe('vl-action-group', async () => {
         return vlActionGroupPage.load();
     });
 
-    after((done) => { 
+    it('als gebruiker kan ik op een knop klikken in een action group', async () => {
+        await vlActionGroupPage.klikOpEersteButtonVanActionGroup();
+    });
+
+    after((done) => {
         if (driver) {
             driver.quit();
         }
