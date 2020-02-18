@@ -1,4 +1,3 @@
-
 const { assert, driver } = require('vl-ui-core').Test.Setup;
 const VlActionGroupPage = require('./pages/vl-action-group.page');
 
@@ -9,14 +8,11 @@ describe('vl-action-group', async () => {
         return vlActionGroupPage.load();
     });
 
-    it('als gebruiker kan ik op een knop klikken in een action group', async () => {
-        await vlActionGroupPage.klikOpEersteButtonVanActionGroup();
+    it('als gebruiker kan ik op de knoppen klikken van een action group', async () => {
+        const actionGroup = await vlActionGroupPage.getActionGroup();
+        await actionGroup.klikOpButtonMetIndex(0);
+        await actionGroup.klikOpButtonMetIndex(1);
     });
 
-    after((done) => {
-        if (driver) {
-            driver.quit();
-        }
-        done();
-    });
+    after(async () => { return driver.quit(); });
 });
