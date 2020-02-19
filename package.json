@@ -59,10 +59,10 @@
     "demo": "http-server"
   },
   "dependencies": {
-    "vl-ui-core": "^4.0.0"
+    "vl-ui-core": "milieuinfo/webcomponent-vl-ui-core#e2e"
   },
   "peerDependencies": {
-    "vl-ui-core": "^4.0.0"
+    "vl-ui-core": "milieuinfo/webcomponent-vl-ui-core#e2e"
   },
   "devDependencies": {
     "@govflanders/vl-ui-action-group": "3.9.1",
