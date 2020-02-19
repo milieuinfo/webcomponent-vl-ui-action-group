@@ -10,7 +10,7 @@ describe('vl-action-group', async () => {
 
     it('als gebruiker kan ik het verschil zien tussen een left, center en right aligned action group', async () => {
         const actionGroup = await vlActionGroupPage.getActionGroup();
-        const actionGroupAlignCenter = await vlActionGroupPage.getAlginCenterActionGroup();
+        const actionGroupAlignCenter = await vlActionGroupPage.getAlignCenterActionGroup();
         const actionGroupAlignRight = await vlActionGroupPage.getAlignRightActionGroup();
 
         await assert.eventually.isTrue(actionGroup.isLeftAligned());

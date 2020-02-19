@@ -10,7 +10,7 @@ class VlActionGroupPage extends Page {
         return this._getActionGroup('#vl-action-group');
     }
 
-    async getAlginCenterActionGroup() {
+    async getAlignCenterActionGroup() {
         return this._getActionGroup('#vl-action-group-align-center');
     }
 
