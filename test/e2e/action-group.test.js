@@ -46,8 +46,6 @@ describe('vl-action-group', async () => {
         const actionGroup = await vlActionGroupPage.getActionGroup();
         const primaryButton = await actionGroup.getButtonMetIndex(0);
         const secondaryButton = await actionGroup.getButtonMetIndex(1);
-        await primaryButton.click();
-        await secondaryButton.click();
         await assert.eventually.isFalse(primaryButton.isSecondary());
         await assert.eventually.isTrue(secondaryButton.isSecondary());
     });
