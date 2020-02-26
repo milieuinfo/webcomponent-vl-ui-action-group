@@ -49,6 +49,4 @@ describe('vl-action-group', async () => {
         await assert.eventually.isFalse(primaryButton.isSecondary());
         await assert.eventually.isTrue(secondaryButton.isSecondary());
     });
-
-    after(async () => { return driver.quit(); });
 });
