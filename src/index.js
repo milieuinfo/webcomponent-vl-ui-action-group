@@ -1,3 +1,3 @@
-module.exports = { 
-    VlActionGroup: require('../dist/vl-action-group.src.js').VlActionGroup
-}
+module.exports = {
+  VlActionGroup: require('../dist/vl-action-group.src.js').VlActionGroup,
+};
