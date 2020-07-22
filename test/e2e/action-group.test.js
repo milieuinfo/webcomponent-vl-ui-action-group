@@ -4,7 +4,7 @@ const VlActionGroupPage = require('./pages/vl-action-group.page');
 describe('vl-action-group', async () => {
   const vlActionGroupPage = new VlActionGroupPage(driver);
 
-  before(() => {
+  before(async () => {
     return vlActionGroupPage.load();
   });
 
