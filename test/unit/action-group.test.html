@@ -29,8 +29,10 @@
         const element = fixture('vl-action-group-fixture');
         ['right', 'center'].forEach((attribuutWaarde) => {
           assert.isFalse((element.classList.contains('vl-action-group--align-' + attribuutWaarde)));
-          element.setAttribute('align', attribuutWaarde);
+          element.setAttribute('data-vl-align', attribuutWaarde);
           assert.isTrue((element.classList.contains('vl-action-group--align-' + attribuutWaarde)));
+          element.removeAttribute('data-vl-align');
+          assert.isFalse((element.classList.contains('vl-action-group--align-' + attribuutWaarde)));
         });
       });
 
@@ -38,8 +40,10 @@
         const element = fixture('vl-action-group-fixture');
         ['space-between', 'bordered'].forEach((attribuut) => {
           assert.isFalse((element.classList.contains('vl-action-group--' + attribuut)));
-          element.setAttribute(attribuut, '');
+          element.setAttribute(`data-vl-${attribuut}`, '');
           assert.isTrue((element.classList.contains('vl-action-group--' + attribuut)));
+          element.removeAttribute(`data-vl-${attribuut}`);
+          assert.isFalse((element.classList.contains('vl-action-group--' + attribuut)));
         });
       });
 
@@ -47,15 +51,26 @@
         const element = fixture('vl-action-group-fixture');
         assert.isFalse((element.classList.contains('vl-action-group--align-right')));
         assert.isFalse((element.classList.contains('vl-action-group--align-center')));
-        element.setAttribute('align', 'right');
+        element.setAttribute('data-vl-align', 'right');
         assert.isTrue((element.classList.contains('vl-action-group--align-right')));
         assert.isFalse((element.classList.contains('vl-action-group--align-center')));
-        element.setAttribute('align', 'center');
+        element.setAttribute('data-vl-align', 'center');
         assert.isFalse((element.classList.contains('vl-action-group--align-right')));
         assert.isTrue((element.classList.contains('vl-action-group--align-center')));
-        element.setAttribute('align', '');
+        element.setAttribute('data-vl-align', '');
         assert.isFalse((element.classList.contains('vl-action-group--align-right')));
         assert.isFalse((element.classList.contains('vl-action-group--align-center')));
+      });
+
+      test('heeft de juiste class voor elk collapse attribuut', () => {
+        const element = fixture('vl-action-group-fixture');
+        ['m', 's', 'xs'].forEach((attribuut) => {
+          assert.isFalse((element.classList.contains('vl-action-group--collapse--' + attribuut)));
+          element.setAttribute(`data-vl-collapse-${attribuut}`, '');
+          assert.isTrue((element.classList.contains('vl-action-group--collapse--' + attribuut)));
+          element.removeAttribute(`data-vl-collapse-${attribuut}`);
+          assert.isFalse((element.classList.contains('vl-action-group--collapse--' + attribuut)));
+        });
       });
     });
   </script>
