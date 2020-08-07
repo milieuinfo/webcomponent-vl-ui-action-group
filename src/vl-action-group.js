@@ -24,8 +24,7 @@ export class VlActionGroup extends nativeVlElement(HTMLDivElement) {
     return ['align', 'space-between', 'bordered', 'collapse-m', 'collapse-s', 'collapse-xs'];
   }
 
-  constructor() {
-    super();
+  connectedCallback() {
     this.classList.add('vl-action-group');
   }
 
