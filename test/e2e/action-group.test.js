@@ -41,12 +41,4 @@ describe('vl-action-group', async () => {
     await assert.eventually.isFalse(actionGroup.isBordered());
     await assert.eventually.isTrue(actionGroupBordered.isBordered());
   });
-
-  it('als gebruiker kan ik op de knoppen klikken van een action group', async () => {
-    const actionGroup = await vlActionGroupPage.getActionGroup();
-    const primaryButton = await actionGroup.getButtonMetIndex(0);
-    const secondaryButton = await actionGroup.getButtonMetIndex(1);
-    await assert.eventually.isFalse(primaryButton.isSecondary());
-    await assert.eventually.isTrue(secondaryButton.isSecondary());
-  });
 });

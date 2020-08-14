@@ -1,14 +1,12 @@
 const {VlElement} = require('vl-ui-core').Test;
-const {VlButton} = require('vl-ui-button').Test;
-const {By} = require('selenium-webdriver');
 
 class VlActionGroup extends VlElement {
   async getAlignedType() {
-    return this.getAttribute('align');
+    return this.getAttribute('data-vl-align');
   }
 
   async isLeftAligned() {
-    return (await this.getAlignedType()) === '';
+    return (await this.getAlignedType()) == undefined;
   }
 
   async isCenterAligned() {
@@ -25,10 +23,6 @@ class VlActionGroup extends VlElement {
 
   async isBordered() {
     return this.hasAttribute('bordered');
-  }
-
-  async getButtonMetIndex(index) {
-    return new VlButton(this.driver, (await this.findElements(By.css('button')))[index]);
   }
 }
 
