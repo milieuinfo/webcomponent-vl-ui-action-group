@@ -1,6 +1,6 @@
 const {VlElement} = require('vl-ui-core').Test;
 const {VlButton} = require('vl-ui-button').Test;
-const {By} = require('selenium-webdriver');
+const {By} = require('vl-ui-core').Test.Setup;
 
 class VlActionGroup extends VlElement {
   async getAlignedType() {
