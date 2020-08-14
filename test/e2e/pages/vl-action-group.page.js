@@ -1,11 +1,7 @@
-const VlActionGroup = require('../components/vl-action-group');
 const {Page, Config} = require('vl-ui-core').Test;
+const VlActionGroup = require('../components/vl-action-group');
 
 class VlActionGroupPage extends Page {
-  async _getActionGroup(selector) {
-    return new VlActionGroup(this.driver, selector);
-  }
-
   async getActionGroup() {
     return this._getActionGroup('#vl-action-group');
   }
@@ -28,6 +24,10 @@ class VlActionGroupPage extends Page {
 
   async load() {
     await super.load(Config.baseUrl + '/demo/vl-action-group.html');
+  }
+
+  async _getActionGroup(selector) {
+    return new VlActionGroup(this.driver, selector);
   }
 }
 
