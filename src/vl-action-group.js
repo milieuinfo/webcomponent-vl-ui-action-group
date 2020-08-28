@@ -45,7 +45,6 @@ export class VlActionGroup extends nativeVlElement(HTMLDivElement) {
   }
 
   _collapseXsChangedCallback(oldValue, newValue) {
-    console.log('boem patat');
     this._toggleCollapseClass(newValue, 'xs');
   }
 
