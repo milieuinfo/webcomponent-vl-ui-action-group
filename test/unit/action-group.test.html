@@ -64,7 +64,7 @@
 
       test('heeft de juiste class voor elk collapse attribuut', () => {
         const element = fixture('vl-action-group-fixture');
-        ['m', 's', 'xs'].forEach((attribuut) => {
+        ['l', 'm', 's', 'xs'].forEach((attribuut) => {
           assert.isFalse((element.classList.contains('vl-action-group--collapse--' + attribuut)));
           element.setAttribute(`data-vl-collapse-${attribuut}`, '');
           assert.isTrue((element.classList.contains('vl-action-group--collapse--' + attribuut)));
