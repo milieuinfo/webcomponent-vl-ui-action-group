@@ -1,10 +1,13 @@
-const {assert, driver} = require('vl-ui-core').Test.Setup;
+const {assert, getDriver} = require('vl-ui-core').Test.Setup;
 const VlActionGroupPage = require('./pages/vl-action-group.page');
 
 describe('vl-action-group', async () => {
-  const vlActionGroupPage = new VlActionGroupPage(driver);
+  let driver;
+  let vlActionGroupPage;
 
   before(() => {
+    driver = getDriver();
+    vlActionGroupPage = new VlActionGroupPage(driver);
     return vlActionGroupPage.load();
   });
 
