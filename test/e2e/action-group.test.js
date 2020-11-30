@@ -3,11 +3,11 @@ const VlActionGroupPage = require('./pages/vl-action-group.page');
 
 describe('vl-action-group', async () => {
   let driver;
-  letvlActionGroupPage;
+  let vlActionGroupPage;
 
   before(() => {
     driver = getDriver();
-    vlCorePage = new VlActionGroupPage(driver);
+    vlActionGroupPage = new VlActionGroupPage(driver);
     return vlActionGroupPage.load();
   });
 
