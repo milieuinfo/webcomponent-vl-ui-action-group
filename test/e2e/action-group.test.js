@@ -11,6 +11,10 @@ describe('vl-action-group', async () => {
     return vlActionGroupPage.load();
   });
 
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlActionGroupPage.hasWcagIssues());
+  });
+
   it('als gebruiker kan ik het verschil zien tussen een left, center en right aligned action group', async () => {
     const actionGroup = await vlActionGroupPage.getActionGroup();
     const actionGroupAlignCenter = await vlActionGroupPage.getAlignCenterActionGroup();
