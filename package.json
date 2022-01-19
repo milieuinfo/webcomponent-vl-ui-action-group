@@ -43,7 +43,7 @@
     "vl-ui-core": "^7.1.0"
   },
   "devDependencies": {
-    "@govflanders/vl-ui-action-group": "^3.12.24",
+    "@govflanders/vl-ui-action-group": "^11.0.0",
     "@govflanders/vl-ui-button": "^3.12.24",
     "@govflanders/vl-ui-core": "^4.1.24",
     "@govflanders/vl-ui-link": "^3.12.24",
